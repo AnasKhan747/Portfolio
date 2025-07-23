@@ -1,0 +1,126 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    padding: 4rem 1.5rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.project-section {
+    margin-bottom: 3rem;
+}
+
+.project-section-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-overview-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.list-group-item {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    background: transparent;
+    border: none;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #4a4a4a;
+}
+
+.list-group-item::before {
+    content: "•";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+    border-radius: 50rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.carousel-inner {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    max-height: 400px;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .project-section-heading {
+        font-size: 1.3rem;
+    }
+
+    .project-overview-text {
+        font-size: 1rem;
+    }
+
+    .carousel-item img {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .carousel-caption {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}

@@ -1,0 +1,139 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --first-color: #007bff; /* Bootstrap primary color */
+  --second-color: #212529; /* Bootstrap dark color */
+  --body-font: "Poppins", sans-serif;
+  --big-font-size: 2.5rem;
+  --h2-font-size: 1.5rem;
+  --normal-font-size: 1rem;
+  --smaller-font-size: .875rem;
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 992px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+  }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+}
+
+/*===== CLASS CSS =====*/
+.section-title {
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: var(--mb-4);
+  text-align: center;
+}
+
+.section-title-invert {
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: #fff;
+  margin-bottom: var(--mb-4);
+  text-align: center;
+}
+
+.section-title-invert::after {
+  content: "";
+  width: 64px;
+  height: 0.18rem;
+  display: block;
+  margin: 0.5rem auto 0;
+  background-color: #fff
+}
+
+.section-title::after {
+  content: "";
+  width: 64px;
+  height: 0.18rem;
+  display: block;
+  margin: 0.5rem auto 0;
+  background-color: var(--first-color);
+}
+
+/*===== LAYOUT =====*/
+.l-header {
+  z-index: var(--z-fixed);
+}
+
+/*===== NAV =====*/
+.navbar-brand {
+  color: var(--second-color);
+  font-weight: 600;
+}
+
+.nav-link:hover::after {
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  display: block;
+  background-color: var(--first-color);
+}
+
+.nav-link.active::after {
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  display: block;
+  background-color: var(--first-color);
+}
+
+/*===== HOME =====*/
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/*===== SKILLS =====*/
+.card {
+  border: none;
+  border-radius: 12px;
+}
+
+.badge {
+  font-size: 0.775rem;
+}
+
+.card-img, .card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: fill;
+}
+
+/*===== SCROLL REVEAL =====*/
+.sr .reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 2s ease;
+}
+
+.sr .reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
